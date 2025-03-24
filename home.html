@@ -20,27 +20,40 @@
             <!-- balance -->
             <div class="stats shadow">
               <div class="stat">
-                <div class="stat-value">9400</div>
+                <div id="account-balance" class="stat-value">9400</div>
                 <div class="stat-desc">Available Balance</div>
               </div>
             </div>
 
             <!-- features start -->
             <div class="divider"></div>
-            <div>
-              <button class="btn btn-lg">Add Money</button>
-              <button class="btn btn-lg">Cush Out</button>
+            <div class="grid grid-cols-2 gap-3">
+              <button id="show-add-money-form" class="btn btn-lg">
+                Add Money
+              </button>
+
+              <button id="show-cash-out-form" class="btn btn-lg">
+                Cash Out
+              </button>
+
+              <button id="show-transaction" class="btn btn-lg col-span-2">
+                Transaction
+              </button>
             </div>
             <div class="divider"></div>
             <!-- features end -->
             <!-- add money start -->
-            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div
+              id="add-money-form"
+              class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+            >
               <form class="card-body">
                 <div class="form-control">
                   <label class="label">
                     <span class="label-text">Amount</span>
                   </label>
                   <input
+                    id="input-add-money"
                     type="text"
                     placeholder="Add Money"
                     class="input input-bordered"
@@ -52,6 +65,7 @@
                     <span class="label-text">4 Digit Pin</span>
                   </label>
                   <input
+                    id="add-pin-number"
                     type="password"
                     placeholder="Enter Your Pin"
                     class="input input-bordered"
@@ -60,15 +74,65 @@
                   />
                 </div>
                 <div class="form-control mt-6">
-                  <button class="btn btn-primary">Add Money</button>
+                  <button id="btn-add-money" class="btn btn-primary">
+                    Add Money
+                  </button>
                 </div>
               </form>
             </div>
             <!-- add money end -->
+            <!-- cush out start -->
+            <div
+              id="cash-out-form"
+              class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+            >
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Cash Out</span>
+                  </label>
+                  <input
+                    id="input-cash-out-money"
+                    type="text"
+                    placeholder="Amount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">4 Digit Pin</span>
+                  </label>
+                  <input
+                    id="input-cash-out-pin"
+                    type="password"
+                    placeholder="Enter Your Pin"
+                    class="input input-bordered"
+                    required
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="btn-cash-out" class="btn btn-primary">
+                    Add Money
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- cush out End -->
+            <!-- transaction  start-->
+            <div id="transaction" class="hidden text-3xl font-extrabold mt-4">
+              <h1>Transaction History</h1>
+              <div id="transaction-container"></div>
+            </div>
+            <!-- transaction  end-->
           </div>
         </div>
       </div>
     </main>
+    <script src="js/utilities.js"></script>
     <script src="js/addMoney.js"></script>
+    <script src="js/cushOut.js"></script>
+    <script src="js/features.js"></script>
   </body>
 </html>
