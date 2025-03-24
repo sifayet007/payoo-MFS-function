@@ -32,7 +32,9 @@
             </div>
             <div class="divider"></div>
             <!-- add money start -->
-            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div
+              class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden"
+            >
               <form class="card-body">
                 <div class="form-control">
                   <label class="label">
@@ -67,6 +69,48 @@
               </form>
             </div>
             <!-- add money End -->
+            <!-- cash Out money start -->
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Cash Out</span>
+                  </label>
+                  <input
+                    id="cash-out"
+                    type="text"
+                    placeholder="Amount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Your Pin Number</span>
+                  </label>
+                  <input
+                    id="cash-out-pin"
+                    type="password"
+                    placeholder="Enter Your Pin"
+                    class="input input-bordered"
+                    required
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="cash-out-button" class="btn btn-primary">
+                    Cash Out
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- cash Out money End -->
+            <!-- transaction section start -->
+            <div>
+              <h1 class="text-3xl font-extrabold">Transaction History</h1>
+              <div></div>
+            </div>
+            <!-- transaction section End -->
           </div>
         </div>
       </div>
